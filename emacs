@@ -1,6 +1,10 @@
 ;; basic initialization, (require) non-ELPA packages, etc.
 (setq package-enable-at-startup nil)
 (package-initialize)
+(emmet-mode 1)
+(require 'auto-complete)
+(global-auto-complete-mode t)
+(ac-js2-mode)
 (global-linum-mode 1)
 (auto-indent-global-mode)
 (setq linum-format "%4d \u2502 ")
@@ -29,6 +33,11 @@
  ;; If there is more than one, they won't work right.
  )
 
+(add-hook 'js-mode-hook (lambda () (tern-mode t)))
+(eval-after-load 'tern
+  '(progn
+     (require 'tern-auto-complete)
+     (tern-ac-setup)))
 
 ;;linum mode
 (defvar *linum-mdown-line* nil)
