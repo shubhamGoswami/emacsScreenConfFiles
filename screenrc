@@ -1,6 +1,3 @@
-# GNU Screen configuration file
-# Balaji S. Srinivasan <balajis@stanford.edu>
-#
 # Notes
 # -----
 # 1. Modified to work with Emacs: C-t is the action command, not C-a. 
