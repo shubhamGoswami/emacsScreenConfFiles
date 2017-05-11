@@ -76,13 +76,13 @@ bind 'b' focus bottom
 #      Set the colors for the "messages" and "text marking"
 #      Example: "+b kG" = blue screen, black text, green background. Change
 #      to "+b kR" and so on to distinguish machines.
-sorendition "+b kG"   
+#sorendition "+b kG"   
 
 # 2.2) hardstatus = navigation bar @ bottom
 hardstatus alwayslastline "%H %-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"  
 
 # 2.3) Autoload two screen tabs for emacs/bash.
-screen -t emacs 0
+screen -t run 0
 screen -t bash 1
 
 # 2.4) Description of the keywords used in hardstatus
@@ -125,3 +125,4 @@ screen -t bash 1
 #    %+Lw     - window list from the next window on (-), show window flags (L)
 #    %-0<     - truncation/padding point.  Place this point zero spaces (0)
 #               from the right margin (-).
+term  xterm-color
